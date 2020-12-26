@@ -94,9 +94,9 @@ class Quiz extends Component{
   }
   renderMessage(){
     if(this.state.correct){
-      return <h3>Good Job! Hit the button below to play Again!</h3>
+      return <h3>Wow Good Job! Hit the button below to play Again!</h3>
     } else{
-      return <h3>ohh ohh! Hit the button below to play Again!</h3>
+      return <h3>ohh ohh Wrong Choice! Hit the button below to play Again!</h3>
     }
   }
   play(){
@@ -107,7 +107,7 @@ class Quiz extends Component{
         return(
             <div className="quiz">
                <div className="quiz-content">
-                 <p className="question"> What is the sum of <span className="text-info">{this.state.riddle.field1}</span> and <span className="text-info"> {this.state.riddle.field2}</span>?</p>
+                 <p className="question"> WHAT IS THE SUM OF <span className="text-info">{this.state.riddle.field1}</span> + <span className="text-info"> {this.state.riddle.field2}</span> ?</p>
                   {this.renderOptions()}
                </div>
                Correct: {this.state.correct ? "True" : "False"}<br/>
@@ -116,7 +116,7 @@ class Quiz extends Component{
                   {this.renderMessage()}
                </div>
                <div className="play-again">
-                 <a className="button" onClick={this.play}>Play Again</a>
+                 <a className="button" onClick={this.play}>Hit the Button Play Again</a>
                </div>
             </div>
         );
